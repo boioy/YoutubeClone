@@ -1,6 +1,8 @@
 /* falls Roboto nicht geladen werden kann */
 body{
   margin: 0;
+  padding-top: 80px;
+  background-color: rgb(250, 250, 250);
 }
 p{
   font-family: Roboto, Arial;
