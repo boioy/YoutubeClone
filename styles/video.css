@@ -4,6 +4,8 @@ object-fit: cover(füllen)/contain(anpassen);
 object-position: left/botton/...;
 */
 
+/* div ist bei default block */
+
 .video-preview-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,8 +13,35 @@ object-position: left/botton/...;
   row-gap: 40px;
 }
 
+@media (max-width: 750px){
+  .video-preview-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.thumbnail-row{
+  position: relative;
+}
 .thumbnail{
   width: 100%;
+}
+
+.video-duration{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  bottom: 10px;
+  right: 10px;
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.video-details-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-top: 15px;
 }
 
 .channel-pic{
@@ -35,12 +64,4 @@ object-position: left/botton/...;
 }
 .video-channel-name{
   margin-bottom: 4px;
-}
-
-/* div ist bei default block */
-
-.video-details-grid{
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  margin-top: 15px;
 }
